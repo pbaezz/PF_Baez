@@ -1,0 +1,40 @@
+.playlist, .sets { 
+    @extend .padre-track 
+} 
+
+.track-musica  {
+    @extend .track
+}
+
+@media (min-width: $tablet) {
+    .playlist, .sets {
+        @include grid-column-2-1fr-center;
+    }
+}
+
+@media (min-width: $desktop) {
+    .playlist
+    .track-musica  {
+        img {
+            width: $img-mediana;
+            transition: width 0.5s;      
+        }
+        & img:hover {
+            width: $img-hoverII;
+        }
+    }
+    .sets
+    .track-musica  {
+        img {
+            width: $img-mediana;
+            transition: width 0.5s;      
+        }
+        & img:hover {
+            width: $img-hoverII;
+        }
+    }
+    h2 {
+    font-size: $fuente-mediana;    
+    
+    }
+}

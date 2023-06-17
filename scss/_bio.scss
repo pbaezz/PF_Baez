@@ -1,0 +1,32 @@
+.main_bio {
+    @include flex-column-center;
+    text-align: justify;
+    gap: $margen-mini;
+    .card_p {
+        margin: 0px 20px;
+        color: $gold;
+        font-weight: 100;
+    }
+    .card_img {
+        width: $img-mediana;
+    }
+}
+
+@media (min-width: $tablet) {
+    .card_p {
+        font-size: $fuente-nav-act;
+    }
+}
+
+@media (min-width: $desktop) {
+        .main_bio {
+            @include grid-column-2-1fr-center;
+        .card_p {
+            font-size: $fuente-mediana;
+            margin-right: 80px;
+        }
+        .card_img {
+            width: $img-grande;
+        }
+    }
+}

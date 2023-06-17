@@ -1,0 +1,17 @@
+iframe {
+    max-width: 100%;
+}
+
+.videos_father {
+    @include flex-column-center;
+    gap: 20px;
+    margin: 0px 30px;
+}
+
+@media (min-width: $desktop) {
+    .videos_father {
+        @include grid-column-2-1fr-center;
+        gap: 20px;
+        padding: 1rem;
+    }
+}
