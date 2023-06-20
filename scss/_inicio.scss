@@ -2,15 +2,44 @@ h1 {
     margin: $margen-chico 0px;
 }
 
+h3{
+    @include flex-column-center;
+    color: $gris;
+    font-weight: 400;
+    font-size: $fuente-mediana;
+    margin-left: $margen-mini;
+    margin-top: -10px;
+    animation-duration: 2s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+}
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.banner {
+    background-image: url("../img/main_studio1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 85vh;
+    @include flex-column-center;
+}
+
 .padre-track { 
     @include flex-column-center;
     text-align: center;
     gap: $margen-chico;  
     .track  {
         img {
-            -webkit-box-shadow: 0px 0px 10px 0px rgba(83,83,83,1);
-            -moz-box-shadow: 0px 0px 10px 0px rgba(83,83,83,1);
-            box-shadow: 0px 0px 10px 0px rgba(83,83,83,1);
+            -webkit-box-shadow: 0px 0px 10px 0px #535353;
+            -moz-box-shadow: 0px 0px 10px 0px #535353;
+            box-shadow: 0px 0px 10px 0px #535353;
             width: $img-chica;
             transition: width 0.5s;    
         }
